@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabNavigationAdd.Comments">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Json coment" />
+            <Button Text="comments" Clicked="Button_Clicked"/>
+            <CollectionView x:Name="commentView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding name}"
+                               FontSize="Medium" />
+                            <Label Text="{Binding email}"
+                               TextColor="Silver"
+                               FontSize="Small" />
+                            <Label Text="{Binding body}"
+                               TextColor="Gray"
+                               FontSize="Caption" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
